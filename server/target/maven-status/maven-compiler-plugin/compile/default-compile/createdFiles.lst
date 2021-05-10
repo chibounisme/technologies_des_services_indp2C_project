@@ -1,0 +1,4 @@
+com\sample\HelloWorldApplication.class
+com\sample\Item.class
+com\sample\activator\JaxRsActivator.class
+com\sample\HelloWorld.class
