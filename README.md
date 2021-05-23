@@ -28,3 +28,13 @@ Commit History:
   - Converted the typescript file to a javascript one by using the command:
     > *tsc main.ts*
   - Added 3 cheat sheets for HTML5, CSS3 and JavaScript correspondingly.
+
+- Commit #5: 3rd Step:
+  - Added Implementation of JAX-RS REST API using RESTEasy in a Java project using the given tutorial
+  - Tested the REST endpoints using navigator
+
+- Commit #6: 4th Step:
+  - Implemented Websocket Server (inside websocket folder) using Node.js & Express. The server sends the WS client a random fact about Michael Jackson every 10 seconds. 
+  - The client connects to the WS Server on page load and proceeds to listen for the upcoming fun facts. Then displays them in the web page.
+  - Added a countdown implementation using Moment.js.
+  - Updated and compiled main.ts.
