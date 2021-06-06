@@ -38,3 +38,5 @@ Commit History:
   - The client connects to the WS Server on page load and proceeds to listen for the upcoming fun facts. Then displays them in the web page.
   - Added a countdown implementation using Moment.js.
   - Updated and compiled main.ts.
+-Commit #7: 5th Step:
+  - Added asynchronous implementation in older Step since we used callbacks to process received random facts in the client side.
