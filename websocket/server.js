@@ -42,6 +42,10 @@ wss.on('connection', function connection(ws) {
     });
 });
 
+wss.on("connect_error", (err) => {
+    console.log(err.message);
+});
+
 app.get('/', (req, res) => res.send('hello world')),
 
     server.listen(3000, () => console.log('listening on port : 3000'));

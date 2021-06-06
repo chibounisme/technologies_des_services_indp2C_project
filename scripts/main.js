@@ -51,16 +51,22 @@ function fetchSongLyrics() {
     // fetch lyrics by song name using "lyrics.ovh" API
     http(`https://api.lyrics.ovh/v1/michael%20jackson/${song.songName}`)
         .then((body) => {
-        song.lyrics = body.parsedBody.lyrics.replaceAll('\n', '<br>');
-        if (isSongSelected) {
-            document.getElementById('lyrics_container').innerHTML = song.lyrics;
-        }
-    });
+            song.lyrics = body.parsedBody.lyrics.replaceAll('\n', '<br>');
+            if (isSongSelected) {
+                document.getElementById('lyrics_container').innerHTML = song.lyrics;
+            }
+        });
 }
 // cette fonction permet de se connecter au server ws
 // et récuperer les données
 function listenForFunFacts() {
     const socket = new WebSocket('ws://localhost:3000');
+    if (io)
+        socket = io({
+            auth: {
+                token: "secret_code" // added security implementation
+            }
+        });
     // en arriere plan, on a envoyé une requete 'connection' au serveur
     socket.addEventListener('message', function (event) {
         const funFactContainer = document.querySelector('#fun_fact_container');

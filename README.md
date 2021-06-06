@@ -40,3 +40,4 @@ Commit History:
   - Updated and compiled main.ts.
 -Commit #7: 5th Step:
   - Added asynchronous implementation in older Step since we used callbacks to process received random facts in the client side.
+  - Added Token Authentication between Websocket Client and Server.
